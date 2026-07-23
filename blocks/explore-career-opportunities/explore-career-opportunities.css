@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .explore-career-opportunities {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+  box-sizing: border-box;
+}
+
+main .explore-career-opportunities .carousel-wrapper {
+  position: relative;
+}
+
+main .explore-career-opportunities .carousel-track {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0;
+}
+
+main .explore-career-opportunities .carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+main .explore-career-opportunities .career-card {
+  flex: 0 0 220px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  background: #1a1a1a;
+}
+
+main .explore-career-opportunities .career-card-image {
+  flex: 5;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+main .explore-career-opportunities .career-card-info {
+  flex: 5;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 0;
+}
+
+main .explore-career-opportunities .career-card-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main .explore-career-opportunities .career-card-desc {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.35;
+  opacity: 0.78;
+  color: inherit;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .explore-career-opportunities .career-card-badge {
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #5ea6db;
+  color: #fff;
+}
+
+main .explore-career-opportunities .career-card-cta {
+  margin-top: auto;
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 0;
+  background: #5ea6db;
+  color: #fff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+main .explore-career-opportunities .career-card-cta:hover {
+  opacity: 0.88;
+}
+
+main .explore-career-opportunities .carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  display: none;
+}
+
+main .explore-career-opportunities .carousel-nav-left {
+  left: 4px;
+}
+
+main .explore-career-opportunities .carousel-nav-right {
+  right: 4px;
+}
+
+main .explore-career-opportunities .carousel-nav:focus-visible {
+  outline: 2px solid #5ea6db;
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  main .explore-career-opportunities { background: #111; }
+}
+body.dark main .explore-career-opportunities { background: #111; }
